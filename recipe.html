@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+  recipe.html — canonical template used by the build tool to
+  generate per-recipe pages at /recipes/<slug>/index.html.
+
+  When the build script regenerates pages it:
+    • copies this file to each /recipes/<slug>/index.html
+    • bakes in the recipe-specific <title>, meta description,
+      OG tags, canonical URL and JSON-LD into the <head>
+    • bakes a <script>window.PAGE_TYPE='recipe';window.SLUG='<slug>'</script>
+      line into the body so main.js knows what to render
+
+  You usually don't open this file directly; open the generated
+  /recipes/<slug>/index.html instead.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe — ecook.wiki</title>
+  <meta name="description" content="Recipe by Chef Li Shi'an." />
+  <link rel="canonical" href="https://ecook.wiki/" />
+  <link rel="alternate" type="application/rss+xml" title="ecook.wiki — Shi'an's Notebook" href="/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <main id="app"></main>
+
+  <script>window.PAGE_TYPE = "recipe";</script>
+  <script src="/config.js"></script>
+  <script src="/recipes.js"></script>
+  <script src="/techniques.js"></script>
+  <script src="/insider.js"></script>
+  <script src="/reviews.js"></script>
+  <script src="/troubleshoot.js"></script>
+  <script src="/glossary.js"></script>
+  <script src="/notebook.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
+  <script src="/assets/main.js" defer></script>
+  <script src="/assets/search.js" defer></script>
+</body>
+</html>

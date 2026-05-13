@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+  <title>ecook.wiki</title>
+  <link>https://ecook.wiki/</link>
+  <atom:link href="https://ecook.wiki/feed.xml" rel="self" type="application/rss+xml" />
+  <description>Recipes, techniques, and industry honesty from Chef Li Shi'an — 30 years in professional Chinese kitchens, now writing it all down.</description>
+  <language>en</language>
+  <copyright>© 2026 ecook.wiki</copyright>
+  <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Mapo Tofu</title>
+    <link>https://ecook.wiki/recipes/mapo-tofu/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/mapo-tofu/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Authentic Sichuan mapo tofu in 25 minutes. From Chef Li Shi'an's 30 years in Chinese kitchens — with the four restaurant tricks home cooks usually miss.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Mapo+Tofu&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Kung Pao Chicken</title>
+    <link>https://ecook.wiki/recipes/kung-pao-chicken/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/kung-pao-chicken/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Authentic Sichuan kung pao chicken — diced, velveted, glossy with the famous sweet-sour-numbing sauce.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Kung+Pao+Chicken&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Red-Braised Pork Belly</title>
+    <link>https://ecook.wiki/recipes/red-braised-pork-belly/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/red-braised-pork-belly/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Authentic Shanghai-style red-braised pork belly — caramel-sugar lacquered, slow-braised to fall-apart tender.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Red-Braised+Pork+Belly&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Beef and Broccoli</title>
+    <link>https://ecook.wiki/recipes/beef-broccoli/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/beef-broccoli/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>The trick to restaurant-tender beef in 10 minutes — velveting, hot wok, and a four-ingredient brown sauce.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Beef+and+Broccoli&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Twice-Cooked Pork</title>
+    <link>https://ecook.wiki/recipes/twice-cooked-pork/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/twice-cooked-pork/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>The original twice-cooked pork: belly boiled until firm, sliced, then fried with doubanjiang and leeks until the edges curl.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Twice-Cooked+Pork&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Yangzhou Fried Rice</title>
+    <link>https://ecook.wiki/recipes/yangzhou-fried-rice/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/yangzhou-fried-rice/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Why your fried rice tastes like home cook's fried rice — and the four restaurant tricks that fix it.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Yangzhou+Fried+Rice&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Scallion Oil Noodles</title>
+    <link>https://ecook.wiki/recipes/scallion-oil-noodles/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/scallion-oil-noodles/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Shanghai's most loved everyday noodle — slowly crisped scallions, dark soy, sugar, and a hot pour over fresh noodles.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Scallion+Oil+Noodles&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Tomato and Egg Noodles</title>
+    <link>https://ecook.wiki/recipes/tomato-egg-noodles/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/tomato-egg-noodles/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>The dish every Chinese kid eats first when they're sick — silky egg, sweet-tart tomato, hand-pulled wheat noodles.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Tomato+%26+Egg+Noodles&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Hot and Sour Soup</title>
+    <link>https://ecook.wiki/recipes/hot-sour-soup/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/hot-sour-soup/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Black pepper heat, dark vinegar tang, silky egg ribbons, and the shredded mushroom-tofu mix that makes it real.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Hot+%26+Sour+Soup&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Tomato Egg Drop Soup</title>
+    <link>https://ecook.wiki/recipes/egg-drop-soup/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/egg-drop-soup/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Five ingredients, ten minutes — the silky tomato-egg soup that every Chinese kitchen knows by heart.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Tomato+Egg+Drop+Soup&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Smashed Cucumber Salad</title>
+    <link>https://ecook.wiki/recipes/smashed-cucumber/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/smashed-cucumber/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Smash, salt, dress. The cold cucumber side that goes with every Chinese meal — sharp, garlicky, lightly numbing.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Smashed+Cucumber&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Garlic Bok Choy</title>
+    <link>https://ecook.wiki/recipes/garlic-bok-choy/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/garlic-bok-choy/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Hot wok, sliced garlic, bok choy. Three things — but the order and timing are everything.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Garlic+Bok+Choy&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Mouthwatering Chicken</title>
+    <link>https://ecook.wiki/recipes/mouthwatering-chicken/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/mouthwatering-chicken/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>Gentle poach, ice bath, sliced cold under a red-oil dressing with vinegar, chilli, sugar and sesame.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Mouthwatering+Chicken&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Mango Pomelo Sago</title>
+    <link>https://ecook.wiki/recipes/mango-pomelo-sago/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/mango-pomelo-sago/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>The famous Hong Kong summer dessert — ripe mango, pomelo strands, sago pearls, evaporated and coconut milk.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Mango+Pomelo+Sago&amp;font=playfair" type="image/png" length="0" />
+  </item>
+  <item>
+    <title>Hong Kong Egg Custard Tarts</title>
+    <link>https://ecook.wiki/recipes/egg-custard-tarts/</link>
+    <guid isPermaLink="true">https://ecook.wiki/recipes/egg-custard-tarts/</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <description>The flaky, layered Hong Kong dim sum classic — silky egg custard in a buttery shell.</description>
+    <enclosure url="https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=HK+Egg+Custard+Tarts&amp;font=playfair" type="image/png" length="0" />
+  </item>
+</channel>
+</rss>

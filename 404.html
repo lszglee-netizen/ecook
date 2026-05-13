@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found — ecook.wiki</title>
+  <meta name="description" content="That page has wandered off. Try a recipe instead." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <main id="app">
+    <div class="wrap-narrow" style="text-align:center; padding: 80px 0;">
+      <h1 style="font-size: clamp(80px, 12vw, 140px); font-style: italic; margin-bottom: 16px; color: var(--c-accent);">404</h1>
+      <p class="article-sub" style="margin: 0 auto 32px;">
+        The page you're looking for has wandered off the cutting board.
+      </p>
+      <p style="margin-bottom: 48px;">
+        <a href="/" style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em;">Back to the kitchen →</a>
+      </p>
+
+      <div style="border-top: 1px solid var(--c-line); padding-top: 48px; max-width: 600px; margin: 0 auto;">
+        <h3 style="font-style: italic;">Or pick something to cook</h3>
+        <div id="suggestions" class="related-grid" style="margin-top: 24px;"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/config.js"></script>
+  <script src="/recipes.js"></script>
+  <script src="/techniques.js"></script>
+  <script src="/insider.js"></script>
+  <script src="/reviews.js"></script>
+  <script src="/troubleshoot.js"></script>
+  <script src="/glossary.js"></script>
+  <script src="/notebook.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
+  <script src="/assets/main.js" defer></script>
+  <script src="/assets/search.js" defer></script>
+  <script>
+    // Pick 3 random recipes and inject as cards
+    window.addEventListener("load", () => {
+      const target = document.getElementById("suggestions");
+      if (!target || !window.RECIPES) return;
+      const pool = window.RECIPES.filter(r => !r.draft);
+      const picks = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
+      picks.forEach(r => {
+        const a = document.createElement("a");
+        a.href = `/recipes/${r.slug}/`;
+        a.className = "card";
+        a.style.color = "inherit";
+        a.style.borderBottom = "1px solid var(--c-line)";
+        a.innerHTML = `
+          <img class="card-cover" src="${r.cover}" alt="${r.coverAlt || ""}" loading="lazy" />
+          <div class="card-body">
+            <h3 class="card-title">${r.title}</h3>
+            <p class="card-sub">${r.subtitle}</p>
+          </div>`;
+        target.appendChild(a);
+      });
+    });
+  </script>
+</body>
+</html>

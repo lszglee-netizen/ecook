@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Can I Cook? — Pantry Finder | ecook.wiki</title>
+  <meta name="description" content="Tell us what's in your kitchen — we'll show you which Chinese recipes you can make right now. From Chef Li Shi'an's tested recipe collection." />
+  <link rel="canonical" href="https://ecook.wiki/tools/pantry/" />
+  <link rel="alternate" type="application/rss+xml" title="ecook.wiki — Shi'an's Notebook" href="/feed.xml" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="What Can I Cook? — Pantry Finder" />
+  <meta property="og:description" content="Pick the ingredients you have. See which Chinese recipes you can make right now." />
+  <meta property="og:url"         content="https://ecook.wiki/tools/pantry/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <style>
+    .pantry-layout {
+      display: grid;
+      gap: 36px;
+      grid-template-columns: 1fr;
+      padding: 32px 0 80px;
+    }
+    @media (min-width: 900px) {
+      .pantry-layout { grid-template-columns: 320px 1fr; }
+    }
+    .pantry-side {
+      position: sticky;
+      top: 90px;
+      align-self: start;
+      max-height: calc(100vh - 110px);
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+    .pantry-side h3 { margin-top: 0; }
+    .pantry-cat {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--c-mute);
+      margin: 24px 0 10px;
+    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      background: var(--c-card);
+      border: 1px solid var(--c-line);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--c-ink);
+      transition: all var(--t-fast);
+    }
+    .chip:hover { border-color: var(--c-accent); }
+    .chip.on {
+      background: var(--c-accent);
+      color: #fff;
+      border-color: var(--c-accent);
+    }
+    .pantry-results {
+      min-height: 200px;
+    }
+    .pantry-empty {
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--c-mute);
+      border: 1px dashed var(--c-line);
+      border-radius: var(--radius);
+    }
+    .match-pill {
+      display: inline-block;
+      background: var(--c-tag-bg);
+      color: var(--c-accent-d);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+    .pantry-clear {
+      background: none;
+      border: 1px solid var(--c-line);
+      color: var(--c-mute);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: var(--f-sans);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+    .pantry-clear:hover { color: var(--c-ink); border-color: var(--c-accent); }
+  </style>
+</head>
+<body>
+  <main id="app">
+    <div class="wrap">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> / <span>Pantry Finder</span>
+      </nav>
+      <header class="article-header">
+        <h1>What can I cook?</h1>
+        <p class="article-sub">Tick the ingredients you have. We'll show you what you can make tonight.</p>
+      </header>
+
+      <div class="pantry-layout">
+        <aside class="pantry-side">
+          <button class="pantry-clear" id="clearAll" type="button">Clear all</button>
+          <h3 style="font-style: italic;">Your pantry</h3>
+          <p style="font-size: 13px; color: var(--c-mute); margin: 0 0 18px;">
+            Don't worry about basics like salt, oil, sugar, garlic — we assume you have those.
+          </p>
+          <div id="ingredientGroups"></div>
+        </aside>
+
+        <section>
+          <div id="resultsMeta" style="font-size: 14px; color: var(--c-mute); margin-bottom: 18px;"></div>
+          <div id="results" class="pantry-results"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="/config.js"></script>
+  <script src="/recipes.js"></script>
+  <script src="/techniques.js"></script>
+  <script src="/insider.js"></script>
+  <script src="/reviews.js"></script>
+  <script src="/troubleshoot.js"></script>
+  <script src="/glossary.js"></script>
+  <script src="/notebook.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
+  <script src="/assets/main.js" defer></script>
+  <script src="/assets/search.js" defer></script>
+
+  <script>
+  (function () {
+    // Ingredients we don't ask about — pantry staples assumed always-on
+    const STAPLES = ["salt","oil","neutral oil","water","sugar","garlic","ginger","scallions","scallion","cornstarch"];
+
+    // Manual groupings so the UI feels curated, not a wall of every word.
+    // Each entry: visible name → array of ingredient strings (lower-cased) that count as a match.
+    const GROUPS = [
+      { cat: "Proteins", items: [
+        { label: "Chicken thigh",  match: ["chicken thigh", "boneless chicken thigh"] },
+        { label: "Chicken (whole/leg)", match: ["whole chicken", "chicken legs", "chicken"] },
+        { label: "Ground beef",    match: ["ground beef"] },
+        { label: "Ground pork",    match: ["ground pork"] },
+        { label: "Flank steak",    match: ["flank steak", "beef"] },
+        { label: "Pork belly",     match: ["pork belly", "skin-on pork belly"] },
+        { label: "Shrimp",         match: ["shrimp"] },
+        { label: "Eggs",           match: ["eggs", "egg"] },
+        { label: "Tofu (any)",     match: ["tofu", "soft tofu", "silken tofu", "firm tofu"] },
+      ]},
+      { cat: "Vegetables", items: [
+        { label: "Tomatoes",       match: ["tomatoes", "tomato"] },
+        { label: "Broccoli",       match: ["broccoli", "broccoli florets"] },
+        { label: "Bok choy",       match: ["bok choy", "baby bok choy"] },
+        { label: "Cucumber",       match: ["cucumber", "cucumbers"] },
+        { label: "Mushrooms (dried)", match: ["shiitake", "dried shiitake", "wood-ear mushrooms", "dried wood-ear mushrooms"] },
+        { label: "Peas (frozen OK)", match: ["peas", "frozen peas"] },
+        { label: "Chinese leek",   match: ["chinese leek", "thick scallion"] },
+      ]},
+      { cat: "Pantry — Chinese", items: [
+        { label: "Pixian doubanjiang", match: ["pixian doubanjiang", "doubanjiang"] },
+        { label: "Shaoxing wine",      match: ["shaoxing wine"] },
+        { label: "Light soy sauce",    match: ["light soy sauce", "soy sauce"] },
+        { label: "Dark soy sauce",     match: ["dark soy sauce"] },
+        { label: "Chinkiang vinegar",  match: ["chinkiang vinegar"] },
+        { label: "Sichuan peppercorns",match: ["sichuan peppercorns", "sichuan peppercorn"] },
+        { label: "Dried red chillies", match: ["dried red chillies"] },
+        { label: "Sichuan chilli oil", match: ["sichuan chilli oil", "chilli oil"] },
+        { label: "Douchi (fermented black beans)", match: ["douchi", "fermented black beans"] },
+        { label: "Sesame oil",         match: ["toasted sesame oil", "sesame oil"] },
+        { label: "Rock sugar",         match: ["rock sugar"] },
+      ]},
+      { cat: "Carbs", items: [
+        { label: "Day-old rice",       match: ["day-old cooked jasmine rice", "rice"] },
+        { label: "Fresh wheat noodles", match: ["fresh wheat noodles", "wheat noodles", "noodles"] },
+        { label: "All-purpose flour",  match: ["all-purpose flour", "flour"] },
+      ]},
+      { cat: "Sweet things", items: [
+        { label: "Ripe mangoes",       match: ["ripe mangoes", "mango"] },
+        { label: "Coconut milk",       match: ["coconut milk"] },
+        { label: "Sago pearls",        match: ["sago pearls"] },
+        { label: "Pomelo or grapefruit", match: ["pomelo segments"] },
+      ]},
+    ];
+
+    const selected = new Set();
+    const groupBox = document.getElementById("ingredientGroups");
+    const results = document.getElementById("results");
+    const meta = document.getElementById("resultsMeta");
+
+    // Build chips
+    GROUPS.forEach(g => {
+      const h = document.createElement("div");
+      h.className = "pantry-cat";
+      h.textContent = g.cat;
+      groupBox.appendChild(h);
+      const row = document.createElement("div");
+      row.className = "chip-row";
+      g.items.forEach(it => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "chip";
+        btn.textContent = it.label;
+        btn.dataset.matches = JSON.stringify(it.match);
+        btn.addEventListener("click", () => {
+          btn.classList.toggle("on");
+          if (btn.classList.contains("on")) selected.add(btn);
+          else selected.delete(btn);
+          rerender();
+        });
+        row.appendChild(btn);
+      });
+      groupBox.appendChild(row);
+    });
+
+    document.getElementById("clearAll").addEventListener("click", () => {
+      selected.forEach(b => b.classList.remove("on"));
+      selected.clear();
+      rerender();
+    });
+
+    function recipeIngredients(r) {
+      return r.ingredients.flatMap(g => g.items.map(i => (i.item + " " + (i.note || "")).toLowerCase()));
+    }
+
+    function matchScore(recipe) {
+      // For each selected ingredient, see if it appears anywhere in the recipe ingredients.
+      const ings = recipeIngredients(recipe);
+      let hits = 0;
+      let missingMain = 0;
+      selected.forEach(btn => {
+        const tokens = JSON.parse(btn.dataset.matches);
+        const found = tokens.some(t => ings.some(i => i.includes(t.toLowerCase())));
+        if (found) hits++;
+      });
+      // Also count required ingredients in recipe that aren't covered (excluding staples)
+      ings.forEach(i => {
+        if (STAPLES.some(s => i.includes(s))) return;
+        const covered = Array.from(selected).some(btn => {
+          const tokens = JSON.parse(btn.dataset.matches);
+          return tokens.some(t => i.includes(t.toLowerCase()));
+        });
+        if (!covered) missingMain++;
+      });
+      return { hits, missingMain };
+    }
+
+    function rerender() {
+      if (selected.size === 0) {
+        results.innerHTML = `
+          <div class="pantry-empty">
+            Pick a few ingredients on the left to see what you can cook.<br><br>
+            <small>Tip: Start with a protein and an aromatic — e.g. Chicken thigh + Pixian doubanjiang.</small>
+          </div>`;
+        meta.textContent = "";
+        return;
+      }
+      const all = (window.RECIPES || []).filter(r => !r.draft);
+      const scored = all.map(r => ({ r, ...matchScore(r) }))
+        .filter(x => x.hits > 0)
+        .sort((a, b) => {
+          if (b.hits !== a.hits) return b.hits - a.hits;
+          return a.missingMain - b.missingMain;
+        });
+      if (!scored.length) {
+        results.innerHTML = `<div class="pantry-empty">Nothing matches yet — try adding a Chinese pantry staple like Pixian doubanjiang or light soy sauce.</div>`;
+        meta.textContent = "";
+        return;
+      }
+      meta.textContent = `${scored.length} recipe${scored.length === 1 ? "" : "s"} match — sorted by how few extra things you'd need to buy.`;
+      const grid = document.createElement("div");
+      grid.className = "grid";
+      grid.style.padding = "0";
+      scored.slice(0, 24).forEach(({ r, hits, missingMain }) => {
+        const card = document.createElement("article");
+        card.className = "card";
+        card.innerHTML = `
+          <a href="/recipes/${r.slug}/">
+            <img class="card-cover" src="${r.cover}" alt="${r.coverAlt || ""}" loading="lazy" />
+            <div class="card-body">
+              <span class="match-pill">${hits} ingredient${hits === 1 ? "" : "s"} ${missingMain ? `· ${missingMain} extra` : "· nothing extra"}</span>
+              <h3 class="card-title">${r.title}</h3>
+              <p class="card-sub">${r.subtitle}</p>
+            </div>
+          </a>`;
+        grid.appendChild(card);
+      });
+      results.innerHTML = "";
+      results.appendChild(grid);
+    }
+
+    rerender();
+  })();
+  </script>
+</body>
+</html>
