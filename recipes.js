@@ -167,7 +167,7 @@ window.RECIPES = [
     difficulty: "Medium",
     servings: 2,
     spiceLevel: 2,
-    cover: "https://github-production-user-asset-6210df.s3.amazonaws.com/263819141/593626614-7f2e94a2-d528-4e94-aef3-2aedc11329e1.jpg",
+    cover: "https://ibb.co/YFcPZ5yB",
     coverAlt: "Kung pao chicken in a dark wok — diced chicken glossed with red sauce, surrounded by toasted peanuts and dried red chillies, scattered with sliced scallion.",
     metaTitle: "Kung Pao Chicken — The Original Sichuan Recipe, from a Chef",
     metaDescription:
