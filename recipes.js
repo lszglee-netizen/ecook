@@ -61,7 +61,7 @@ window.RECIPES = [
     difficulty: "Medium",
     servings: 2,
     spiceLevel: 3,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Mapo+Tofu&font=playfair",
+    cover: "https://i.ibb.co/C5CjZrL3/ab.jpg",
     coverAlt: "Mapo tofu in a small clay bowl, glossy red oil pooling around silken tofu cubes, scattered with green scallion.",
     metaTitle: "Mapo Tofu Recipe — How a Chinese Chef Actually Makes It",
     metaDescription:
