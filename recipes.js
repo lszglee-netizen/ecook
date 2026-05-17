@@ -269,7 +269,7 @@ window.RECIPES = [
     difficulty: "Easy",
     servings: 4,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Red-Braised+Pork+Belly&font=playfair",
+    cover: "https://i.ibb.co/8DR6HF14/hsr.jpg",
     coverAlt: "Glossy red-braised pork belly cubes in a dark caramel-soy sauce, scattered with sliced scallion green.",
     metaTitle: "Red-Braised Pork Belly (Hong Shao Rou) — A Chef's Sunday Recipe",
     metaDescription:
