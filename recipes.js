@@ -457,7 +457,7 @@ window.RECIPES = [
     difficulty: "Medium",
     servings: 3,
     spiceLevel: 2,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Twice-Cooked+Pork&font=playfair",
+    cover: "https://i.ibb.co/bgj9nFjv/cym.jpg",
     coverAlt: "Curled slices of twice-cooked pork belly with thick leek pieces in a deep red oily sauce.",
     metaTitle: "Twice-Cooked Pork (Hui Guo Rou) — Authentic Sichuan Recipe",
     metaDescription:
