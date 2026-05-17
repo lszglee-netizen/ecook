@@ -644,7 +644,7 @@ window.RECIPES = [
     difficulty: "Easy",
     servings: 2,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Scallion+Oil+Noodles&font=playfair",
+    cover: "https://i.ibb.co/rGKrJ3Kp/cym.jpg",
     coverAlt: "Dark, glossy scallion-oil noodles in a small white bowl, crisped scallions piled on top.",
     metaTitle: "Scallion Oil Noodles (Cong You Ban Mian) — 5 Ingredients, A Chef's Method",
     metaDescription:
