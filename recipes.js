@@ -361,7 +361,7 @@ window.RECIPES = [
     difficulty: "Easy",
     servings: 2,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Beef+and+Broccoli&font=playfair",
+    cover: "https://i.ibb.co/7dLZhHG6/a8014c086e061d951c302fe8fea352c163d9ca57.webp",
     coverAlt: "Glossy slices of velveted beef among bright green broccoli florets in a brown sauce.",
     metaTitle: "Beef and Broccoli — Restaurant-Style, From a Chinese Chef",
     metaDescription:
@@ -550,7 +550,7 @@ window.RECIPES = [
     difficulty: "Medium",
     servings: 2,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Yangzhou+Fried+Rice&font=playfair",
+    cover: "https://i.ibb.co/XZxxxb6Q/621a4e058434568a1883dd6352ef26db147022-webp-watermark-0.webp",
     coverAlt: "Loose, glossy Yangzhou fried rice in a wok — pale yellow grains studded with egg, pink shrimp, diced ham, and bright green peas.",
     metaTitle: "Yangzhou Fried Rice — The Real Recipe, From a Chinese Chef",
     metaDescription:
@@ -734,7 +734,7 @@ window.RECIPES = [
     difficulty: "Easy",
     servings: 2,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Tomato+%26+Egg+Noodles&font=playfair",
+    cover: "https://i.ibb.co/7tfmLdRr/image.png",
     coverAlt: "A small bowl of wheat noodles in a sweet-tart tomato-egg broth, sliced scallion floating on top.",
     metaTitle: "Tomato and Egg Noodles — Chinese Comfort, 20 Minutes",
     metaDescription:
@@ -828,7 +828,7 @@ window.RECIPES = [
     difficulty: "Medium",
     servings: 4,
     spiceLevel: 2,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Hot+%26+Sour+Soup&font=playfair",
+    cover: "https://i.ibb.co/5Jb82Hs/xnoi2-HTQ99-Hya-Zk5-Ivl-Bdavz-Ui-Wt-YXrb-N8a-Mi1s-J8-I5b-On-ZKOd-SCot-T5-V-j-F35h.jpg",
     coverAlt: "Dark brown hot and sour soup with shredded wood-ear, shiitake, tofu, and silky egg ribbons floating on the surface.",
     metaTitle: "Hot and Sour Soup — A Chinese Chef's Restaurant Recipe",
     metaDescription:
@@ -929,7 +929,7 @@ window.RECIPES = [
     difficulty: "Easy",
     servings: 4,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Tomato+Egg+Drop+Soup&font=playfair",
+    cover: "https://i.ibb.co/gMsX5R0s/u-564266399-1028544084-fm-253-app-138-f-JPEG.jpg",
     coverAlt: "Pale red-orange tomato egg drop soup in a small bowl, silky egg ribbons floating, sliced scallion on top.",
     metaTitle: "Tomato Egg Drop Soup — 10 Minute Chinese Comfort",
     metaDescription:
@@ -1007,7 +1007,7 @@ window.RECIPES = [
     difficulty: "Easy",
     servings: 2,
     spiceLevel: 1,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Smashed+Cucumber&font=playfair",
+    cover: "https://i.ibb.co/nqNYzdx4/s-cm-02-001.jpg",
     coverAlt: "Smashed cucumber pieces, jagged and pale green, glossed with a dark garlicky vinegar dressing and red chilli oil.",
     metaTitle: "Smashed Cucumber Salad (Pai Huang Gua) — 5 Minute Chinese Side",
     metaDescription:
@@ -1094,7 +1094,7 @@ window.RECIPES = [
     difficulty: "Easy",
     servings: 2,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Garlic+Bok+Choy&font=playfair",
+    cover: "https://i.ibb.co/6cjrvfGk/SMmbtwgd-Uiusj-OVZphgco-HNYve-UCa-GKu-PCdc7-L4-Yy-YMDArr-Un4-Dx-Rh-E1-TKOijr-P5.jpg",
     coverAlt: "Glossy stir-fried baby bok choy with halved stalks and bright green leaves, scattered with crisp golden garlic slices.",
     metaTitle: "Garlic Bok Choy — 8 Minute Chinese Vegetable Stir-Fry",
     metaDescription:
@@ -1275,7 +1275,7 @@ window.RECIPES = [
     difficulty: "Easy",
     servings: 4,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Mango+Pomelo+Sago&font=playfair",
+    cover: "https://i.ibb.co/pBfgLV1j/d01373f082025aaf5251b170fbedab64034f1a2e.jpg",
     coverAlt: "A small glass bowl of mango pomelo sago — pale orange purée thick with translucent sago pearls, topped with bright diced mango and pomelo strands.",
     metaTitle: "Mango Pomelo Sago — Hong Kong Dessert, From a Chef",
     metaDescription:
@@ -1366,7 +1366,7 @@ window.RECIPES = [
     difficulty: "Hard",
     servings: 12,
     spiceLevel: 0,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=HK+Egg+Custard+Tarts&font=playfair",
+    cover: "https://i.ibb.co/k2GVz8sC/u-435187089-4025831770-fm-253-fmt-auto-app-138-f-JPEG.webp",
     coverAlt: "A Hong Kong egg tart broken in half, showing the deeply layered flaky golden pastry shell and the smooth, bright yellow set custard inside.",
     metaTitle: "Hong Kong Egg Custard Tarts — Dim Sum Recipe, From a Chef",
     metaDescription:
