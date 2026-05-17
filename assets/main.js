@@ -215,6 +215,9 @@
               el("li", {}, [el("a", { href: "/" }, ["All Recipes"])]),
               el("li", {}, [el("a", { href: "/tools/pantry/" }, ["What can I cook?"])]),
               el("li", {}, [el("a", { href: "/about/" }, ["About Li Shi'an"])]),
+              site.newsletter && site.newsletter.publicSubscribeUrl
+                ? el("li", {}, [el("a", { href: site.newsletter.publicSubscribeUrl, target: "_blank", rel: "noopener" }, ["Subscribe to Shi'an's Notebook →"])])
+                : null,
             ]),
           ]),
           el("div", {}, [

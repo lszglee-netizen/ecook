@@ -53,8 +53,9 @@ window.SITE = {
   newsletter: {
     enabled: true,
     provider: "buttondown",
-    // Buttondown handle: ecook.wiki
-    formAction: "https://buttondown.com/api/emails/embed-subscribe/ecook.wiki",
+    // Buttondown handle: ecook
+    formAction: "https://buttondown.com/api/emails/embed-subscribe/ecook",
+    publicSubscribeUrl: "https://buttondown.com/ecook",
     headline: "Shi'an's Notebook",
     pitch:
       "One short letter each Sunday — a story from the kitchen, a technique worth keeping, sometimes a new recipe.",
