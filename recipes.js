@@ -1179,7 +1179,7 @@ window.RECIPES = [
     difficulty: "Medium",
     servings: 4,
     spiceLevel: 3,
-    cover: "https://placehold.co/1600x900/F4ECE0/8B6F47/png?text=Mouthwatering+Chicken&font=playfair",
+    cover: "https://i.ibb.co/WpkkNhPB/ksj.png",
     coverAlt: "Sliced cold poached chicken arranged on a platter under a glossy red-oil dressing, scattered with sesame seeds, chopped peanuts and cilantro.",
     metaTitle: "Mouthwatering Chicken (Kou Shui Ji) — A Chef's Sichuan Recipe",
     metaDescription:
